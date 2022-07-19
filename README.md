@@ -10,7 +10,7 @@ This package is built and tested on Ubuntu 20.04 LTS and ROS Noetic with Python 
 ```bash
 cd <ros_workspace>/src
 git clone https://github.com/mats-robotics/detection_msgs.git
-git clone --recurse-submodules https://github.com/mats-robotics/yolov5_ros.git 
+git clone --recurse-submodules https://github.com/Dorteel/yolov5_ros.git 
 cd yolov5_ros/src/yolov5
 pip install -r requirements.txt # install the requirements for yolov5
 ```

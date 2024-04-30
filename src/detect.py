@@ -105,9 +105,9 @@ class Yolov5Detector:
         """adapted from yolov5/detect.py"""
         # print(data.header)
         if self.compressed_input:
-            im = self.bridge.compressed_imgmsg_to_cv2(data, desired_encoding="bgr8")
+            im = self.bridge.compressed_imgmsg_to_cv2(data)#, desired_encoding="bgr8")
         else:
-            im = self.bridge.imgmsg_to_cv2(data, desired_encoding="bgr8")
+            im = self.bridge.imgmsg_to_cv2(data)#, desired_encoding="bgr8")
         
         im, im0 = self.preprocess(im)
         # print(im.shape)

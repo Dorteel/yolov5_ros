@@ -109,7 +109,12 @@ class Yolov5Detector:
         else:
             im = self.bridge.imgmsg_to_cv2(data)#, desired_encoding="bgr8")
         
+            # Check the number of channels and convert if necessary
+        if im.shape[2] == 4:
+            im = cv2.cvtColor(im, cv2.COLOR_RGBA2RGB)
+        
         im, im0 = self.preprocess(im)
+        
         # print(im.shape)
         # print(img0.shape)
         # print(img.shape)
